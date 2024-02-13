@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/style.css" rel="stylesheet">
+    <script src="static/script.js" defer></script>
+    <title>Big City Life API</title>
+</head>
+<body>
+    <div id="topSectionContainer">
+        <div id="headingContainer"><h1 id="heading">Big City Life API</h1></div>
+        <div id="getApiKeyContainer"><h3 id="getApiKey">Get your API key here!</h3></div>
+        <dialog id="getApiKeyDialog"></dialog>
+    </div>
+    <div id="endPointsContainer">
+        <div id="endPointsHeaderContainer"><h2 id="endPointsHeader">All the available end-points...</h2></div>
+        <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a user - </h2></div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET a user using the unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">PATCH a user details the unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">DELETE a user using the unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+        </div>
+        <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a city - </h2></div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">Get all cities currently in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET all cities currently in the API that are owned by your unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-cities")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">POST a city to the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">DELETE a city using the city name (Your API key must be the owner of the POST)</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*/*CITYNAME*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">PATCH a city using the city name (Your API key must be the owner of the POST)</h>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*/*CITYNAME*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET a single city using the city name</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET the number of cities currently in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/number-of-cities")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET the number of countries currently in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/number-of-countries")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET a list of all cpuntries currently in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/list-of-countries")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET the top 10 most populace cities currently in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/most-populace-cities")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET the top 10 least populace cities currently in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/least-populace-cities")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET a random city from the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/random-city")</h3>
+        </div>
+        <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a review - </h2></div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET all reviews connected to your unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">POST a review for a city in the API</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/submit-review")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">PATCH a review connected to your unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*REVIEWID")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">DELETE all reviews connected to your unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">DELETE a single review connected to your unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*REVIEWID*")</h3>
+        </div>
+        <div class="endPoints">
+            <h3 class="endPointDescriptions">GET all reviews for a city by rating (1 - 5)</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*/*RATING*")</h3>
+        </div>
+    </div>
+    <div id="space"></div>
+</body>
+</html>
