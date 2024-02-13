@@ -20,6 +20,11 @@ body {
     margin: 0;
 }
 
+.endPoints {
+    margin: 1% 0 1% 0;
+    padding: 1px 0 1px 0;
+}
+
 .endPointsSubHeaderContainers, #topSectionContainer {
     padding: 1px 0 1px 0;
 }
