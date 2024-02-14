@@ -29,7 +29,7 @@ body {
     padding: 1px 0 1px 0;
 }
 
-#getApiKey:hover {
+#getApiKey:hover, #deactivate:hover {
     color: red;
     text-decoration: underline;
 
@@ -53,4 +53,9 @@ input {
 
 #space {
     height: 15px;
+}
+
+#deactivate {
+    text-align: left;
+    margin-left: 1%;
 }

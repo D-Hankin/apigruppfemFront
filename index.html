@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="topSectionContainer">
+        <h4 id="deactivate">Deactivate your API Key.</h4>
         <div id="headingContainer"><h1 id="heading">Big City Life API</h1></div>
         <div id="getApiKeyContainer"><h3 id="getApiKey">Get your API key here!</h3></div>
         <dialog id="getApiKeyDialog"></dialog>
@@ -25,12 +26,12 @@
             <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
         </div>
         <div class="endPoints">
-            <h3 class="endPointDescriptions">DELETE a user using the unique API key</h3>
-            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+            <h3 class="endPointDescriptions">PATCH a user to deactivate the API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*/deactivate-apikey")</h3>
         </div>
         <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a city - </h2></div>
         <div class="endPoints">
-            <h3 class="endPointDescriptions">Get all cities currently in the API</h3>
+            <h3 class="endPointDescriptions">GET all cities currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*")</h3>
         </div>
         <div class="endPoints">

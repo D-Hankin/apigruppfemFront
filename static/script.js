@@ -1,7 +1,10 @@
 const getApiKeyDialog = document.getElementById("getApiKeyDialog");
 const getApiKey = document.getElementById("getApiKey");
+const deactivate = document.getElementById("deactivate");
 
-getApiKey.addEventListener("click", () => getApiKeyEventListener())
+deactivate.addEventListener("click", () => deactivateEventListener());
+
+getApiKey.addEventListener("click", () => getApiKeyEventListener());
 
 function getApiKeyEventListener () {
     getApiKeyDialog.innerHTML = "";
@@ -70,4 +73,57 @@ function submitButtonEventListener(firstName, secondName, email) {
         getApiKeyDialog.removeAttribute("open");
     }
     
+}
+
+function deactivateEventListener() {
+    getApiKeyDialog.innerHTML = "";
+    let deactivateForm = document.createElement("form");
+    let deactivateInput = document.createElement("input");
+    deactivateInput.placeholder = "API Key";
+    let deactivateBtn = document.createElement("button");
+    deactivateBtn.type = "button";
+    deactivateBtn.innerText = "Deactivate";
+    let starMessage = document.createElement("h4");
+    starMessage.innerText = "*Doing this will not remove content from the API connected to this API key.";
+    deactivateForm.append(deactivateInput, deactivateBtn, starMessage);
+    getApiKeyDialog.appendChild(deactivateForm);
+    getApiKeyDialog.setAttribute("open", true);
+
+    deactivateBtn.addEventListener("click", () => deactivateBtnEventListener(deactivateInput.value));
+}
+
+function deactivateBtnEventListener(apiKey) {
+
+    if (apiKey.trim() != "") {
+        fetch("http://localhost:8080/api/user/" + apiKey + "/deactivate-apikey", {
+            method: "PATCH"
+        }) 
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`Failed to deactivate API key: ${res.statusText}`);
+            }
+            return res.text();
+        })
+        .then(data => {
+    
+            getApiKeyDialog.innerHTML="";
+    
+            let doneMessage = document.createElement("h3")
+            doneMessage.innerText = data;
+            let closeBtn = document.createElement("button");
+            closeBtn.type = "button";
+            closeBtn.innerText = "close";
+            getApiKeyDialog.append(doneMessage, closeBtn);
+            closeBtn.addEventListener("click", () => {
+                getApiKeyDialog.innerHTML ="";
+                getApiKeyDialog.removeAttribute("open");
+            })
+        }).catch(error => {
+            alert(error.message);
+            getApiKeyDialog.removeAttribute("open");
+        })
+    } else {
+        alert("You need to enter an API key.")
+        getApiKeyDialog.removeAttribute("open");
+    }
 }
