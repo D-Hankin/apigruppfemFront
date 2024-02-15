@@ -106,12 +106,12 @@
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">POST a review for a city in the API</h3>
-            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/submit-review")</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews/submit-review")</h3>
             <h4 class="descriptions">Enter API-key to the URL and submit a review of the city as a JSON object. The Review object needs to contain a review, rating and a cityId(can be seen in the city object)</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">PATCH a review connected to your unique API key</h3>
-            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*REVIEWID")</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews/*REVIEWID")</h3>
             <h4 class="descriptions">Enter the review creators API-key to the URL. Enter reviewId, review and rating to the request body (JSON)</h4>
         </div>
         <div class="endPoints">
@@ -121,12 +121,12 @@
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">DELETE a single review connected to your unique API key</h3>
-            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*REVIEWID*")</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews/*REVIEWID*")</h3>
             <h4 class="descriptions">Enter the review creators API-key and the reviewId to the URL to delete the review</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET all reviews for a city by rating (1 - 5)</h3>
-            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*/*RATING*")</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews/*CITYNAME*/*RATING*")</h3>
             <h4 class="descriptions">Enter API-key and a rating to the URL to show all reviews of that city with that rating</h4>
         </div>
     </div>
