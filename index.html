@@ -18,90 +18,116 @@
         <div id="endPointsHeaderContainer"><h2 id="endPointsHeader">All the available end-points...</h2></div>
         <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a user - </h2></div>
         <div class="endPoints">
+            <h3 class="endPointDescriptions">POST a new user to get a unique API key</h3>
+            <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*/deactivate-apikey")</h3>
+            <h4 class="descriptions">Enter API-key to the URL. Enter firstName, lastName and email to the request body</h4>
+        </div>
+        <div class="endPoints">
             <h3 class="endPointDescriptions">GET a user using the unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to retrieve and show all the users currently in the database.</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">PATCH a user details the unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*")</h3>
+            <h4 class="descriptions">Enter API-key and the values you want to change to the request body to update the user.</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">PATCH a user to deactivate the API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/user/*APIKEY*/deactivate-apikey")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to deactivate it. This will not remove content from the API connected to the API key.</h4>
         </div>
         <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a city - </h2></div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET all cities currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to retrieve and show all the cities currently in the database.</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET all cities currently in the API that are owned by your unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-cities")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show your created cities</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">POST a city to the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*")</h3>
+            <h4 class="descriptions">Enter API-key to the URL. Enter cityName, country, description, population and imageUrl(String) to the request body (JSON). Population values: Min value = 1,000, Max value = 100,000,000</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">DELETE a city using the city name (Your API key must be the owner of the POST)</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*")</h3>
+            <h4 class="descriptions">Enter cityId & the city creator API-key to the URL to delete a city</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">PATCH a city using the city name (Your API key must be the owner of the POST)</h>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*")</h3>
+            <h4 class="descriptions">Enter API-key to the URL. Enter cityName, country, description, imageUrl and population to the request body(JSON)</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET a single city using the city name</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*")</h3>
+            <h4 class="descriptions">Enter API-key and cityName to the URL to show the city</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET the number of cities currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/number-of-cities")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show how many cities that are in the database</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET the number of countries currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/number-of-countries")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show how many countries that are in the database</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET a list of all countries currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/list-of-countries")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show a list off all countries</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET the top 10 most populace cities currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/most-populace-cities")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show the ten most populated cities</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET the top 10 least populace cities currently in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/least-populace-cities")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show the ten least populated cities</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET a random city from the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/random-city")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to show a random city</h4>
         </div>
         <div class="endPointsSubHeaderContainers"><h2 class="endPointsSubHeaders">For a review - </h2></div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET all reviews connected to your unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to retrieve and show all the reviews currently in the database connected to a specific api key.</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">POST a review for a city in the API</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/submit-review")</h3>
+            <h4 class="descriptions">Enter API-key to the URL and submit a review of the city as a JSON object. The Review object needs to contain a review, rating and a cityId(can be seen in the city object)</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">PATCH a review connected to your unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*REVIEWID")</h3>
+            <h4 class="descriptions">Enter the review creators API-key to the URL. Enter reviewId, review and rating to the request body (JSON)</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">DELETE all reviews connected to your unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/my-reviews")</h3>
+            <h4 class="descriptions">Enter API-key to the URL to delete all reviews associated to that API key</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">DELETE a single review connected to your unique API key</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*REVIEWID*")</h3>
+            <h4 class="descriptions">Enter the review creators API-key and the reviewId to the URL to delete the review</h4>
         </div>
         <div class="endPoints">
             <h3 class="endPointDescriptions">GET all reviews for a city by rating (1 - 5)</h3>
             <h3 class="endPointUrls">("http://localhost:8080/api/city/*APIKEY*/*CITYNAME*/*RATING*")</h3>
+            <h4 class="descriptions">Enter API-key and a rating to the URL to show all reviews of that city with that rating</h4>
         </div>
     </div>
     <div id="space"></div>
