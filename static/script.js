@@ -49,7 +49,13 @@ function submitButtonEventListener(firstName, secondName, email) {
         };
         
         fetch("http://localhost:8080/api/user/create-user", requestOptions)
-            .then(res => res.json())
+            .then(res => {
+
+                if (!res.ok) {
+                  throw new Error('Network response was not ok: ' + response.statusText);
+                }
+                return res.json();
+              })
             .then(data => {
                 console.log(data);
                 getApiKeyDialog.innerHTML = "";
@@ -65,9 +71,19 @@ function submitButtonEventListener(firstName, secondName, email) {
                 getApiKeyDialog.append(message, apiKey, message2, closeBtn);
                 closeBtn.addEventListener("click", () => {
                     getApiKeyDialog.removeAttribute("open");
-                })
+                })               
             })
-            .catch((error) => console.error(error));
+            .catch(() => {
+                let message = document.createElement("h3");
+                message.innerText = "You did not enter a valid email address!";
+                let closeBtn = document.createElement("button");
+                closeBtn.type = "button";
+                closeBtn.innerText = "Close";
+                getApiKeyDialog.append(message, closeBtn);
+                closeBtn.addEventListener("click", () => {
+                    getApiKeyDialog.removeAttribute("open");
+                })
+            });
     } else {
         alert("You need to fill in all the fields");
         getApiKeyDialog.removeAttribute("open");
