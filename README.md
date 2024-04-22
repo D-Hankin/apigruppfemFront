@@ -19,14 +19,16 @@ This frontend application allows users to create API keys, view available endpoi
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   https://github.com/D-Hankin/apigruppfemFront.git
    ```
 2. Open the index.html file in your web browser to view the frontend.
 
 ## Usage
-    For use with https://github.com/D-Hankin/apigruppfem and https://github.com/D-Hankin/apigruppfemUseCase
-    Create an API key.
-    View available endpoints.
-    Manage your API keys:
-        Change user information.
-        Delete API key.
+
+For use with https://github.com/D-Hankin/apigruppfem and https://github.com/D-Hankin/apigruppfemUseCase.
+
+Create an API key.
+View available endpoints.
+Manage your API keys:
+    Change user information.
+    Delete API key.
